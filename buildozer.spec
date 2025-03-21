@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = LoveCalc
+title = stockproce
 
 # (str) Package name
-package.name = LoveCalculator
+package.name = StockPricing
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.stack
+package.domain = org.apal
 
 # (str) Source code where the main.py live
 source.dir = .
