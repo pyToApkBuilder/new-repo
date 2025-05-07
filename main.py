@@ -11,17 +11,15 @@ def calculate_bmi():
         lower = (height_m ** 2) * 18.5 
         category,range = get_bmi_category(bmi)
         result_label.config(text=f"\nBMI: {bmi:.2f} ({range})\n")
-        if category != "Normal weight":
-            category_label.config(text=f"Category: {category} \nShould be between {lower:.1f} and {upper:.1f}")
-        else:
-            category_label.config(text=f"Category: {category}")
+        category_label.config(text=f"Category: {category} \nShould be between {lower:.1f} and {upper:.1f}")
+        
             
     except ValueError:
         messagebox.showerror("Input Error", "Please enter valid numbers.")
 
 def get_bmi_category(bmi):
     if bmi < 18.5:
-        category_label.config(fg="#ff4321")
+        category_label.config(fg="#ff9900") if bmi > 15 else category_label.config(fg="red")
         return "Underweight","Bellow 18.5"
         
     elif bmi < 24.9:
